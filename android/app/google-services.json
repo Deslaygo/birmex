@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "940219477764",
+    "firebase_url": "https://birmex-875be.firebaseio.com",
+    "project_id": "birmex-875be",
+    "storage_bucket": "birmex-875be.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940219477764:android:5d3f27e0c7b37ddc576a51",
+        "android_client_info": {
+          "package_name": "adscompany.com.birmex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "940219477764-8u1r6740kdgba5t8fge8uthpaf5e8cjc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "adscompany.com.birmex",
+            "certificate_hash": "4e8dee8c64cb1ddce0192b4785d9e803b26ddee6"
+          }
+        },
+        {
+          "client_id": "940219477764-hunsvhkhd5l0vi2tikqmbgvkr4taisj9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5O8JofjKwJZ66jjgdcSQrdRCjJ7tMtsY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "940219477764-hunsvhkhd5l0vi2tikqmbgvkr4taisj9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

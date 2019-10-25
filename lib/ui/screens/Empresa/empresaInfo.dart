@@ -9,10 +9,18 @@ class EmpresaInfoPage extends StatefulWidget {
 class _EmpresaInfoPageState extends State<EmpresaInfoPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-       child: Center(
-         child: Text("Info empresa"),
-       ),
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height * 0.30,
+              child: Image.asset("assets/icons/birmex.png"),
+            )
+          ],
+        ),
+      ),
     );
   }
 }

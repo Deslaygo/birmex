@@ -75,7 +75,7 @@ class _LoginFormState extends State<LoginForm> {
                    ),
                    child: new TextFormField(
                      controller: _passwordController,
-                     obscureText:false,
+                     obscureText:true,
                      keyboardType: TextInputType.text,
                      validator: _validatePass,
                      style: const TextStyle(
@@ -137,7 +137,7 @@ class _LoginFormState extends State<LoginForm> {
       //Se intenta hacer el login con los datos 
       FirebaseUser user;
       try {
-        FirebaseUser user = await _auth.signInWithEmailAndPassword(
+          user = await _auth.signInWithEmailAndPassword(
           email: _emailController.text,
           password: _passwordController.text
         );
@@ -145,12 +145,14 @@ class _LoginFormState extends State<LoginForm> {
         //se valida que el usuario trae algo para mandarlo a la vista home
         if (user != null) {
           if(user.email == "admin456@birmex.com"){
-            Navigator.of(context).push(new MaterialPageRoute(
-            builder: (_) => HomeTabsAdmin(),
-          ));
+            print("admin");
+            Navigator.pushReplacement(context, MaterialPageRoute(
+              builder: (_) => HomeTabsAdmin(user: user,),
+            ));
+            //Navigator.pushReplacementNamed(context,"/homeAdmin");
           }else{
-            Navigator.of(context).push(new MaterialPageRoute(
-            builder: (_) => HomeTabs(),
+            Navigator.pushReplacement(context,new MaterialPageRoute(
+            builder: (_) => HomeTabs(user: user,),
           ));
           }
         } 

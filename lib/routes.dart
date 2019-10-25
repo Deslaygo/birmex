@@ -1,43 +1,29 @@
+import 'package:birmex/core/services/authService.dart';
+import 'package:birmex/locator.dart';
 import 'package:birmex/ui/screens/homeTabs.dart';
+import 'package:birmex/ui/screens/admin/homeTabs.dart';
 import 'package:birmex/ui/screens/login/login.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'core/viewModels/crudTerrenoModel.dart';
+import 'core/viewModels/crudUserModel.dart';
 
 class Routes{
   Routes(){
-    runApp(new MaterialApp(
+    runApp(MultiProvider(
+      providers: [
+        ChangeNotifierProvider(builder: (_) => locator<CrudTerrenoModel>()),
+        ChangeNotifierProvider(builder: (_) => locator<CrudUserModel>()),
+        ChangeNotifierProvider(builder: (_) => locator<AuthService>(),)
+      ],
+    child:
+    MaterialApp(
       title: 'Birmex',
       home: LoginScreen(),
-      onGenerateRoute: (RouteSettings settings){
-        switch (settings.name) {
-          case '/login':
-            return new MyCustomRoute(
-              builder: (_) => new LoginScreen() ,
-              settings: settings,
-            );
-            break;
-            case '/home':
-            new MyCustomRoute(
-              builder: (_) => new HomeTabs(),
-              settings: settings,
-            );
-            break;
-          default:
-        }
-      },
-    ));
+     routes: {
+       "/homeAdmin": (_) => HomeTabsAdmin(),
+     },
+    )),);
   }
-}
-
-//Clase para las rutas customizadas
-class MyCustomRoute<T> extends MaterialPageRoute<T>{
-
-  //constructor
-  MyCustomRoute({WidgetBuilder builder, RouteSettings settings}):super(
-    builder: builder,settings:settings);
-
-    @override
-    Widget buildTransition(BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation,Widget child){
-      if(settings.isInitialRoute) return child;
-      return new FadeTransition(opacity: animation,child: child);
-    }
 }

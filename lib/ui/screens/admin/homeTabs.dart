@@ -1,9 +1,15 @@
 import 'package:birmex/ui/screens/admin/pages/listTerrenos.dart';
 import 'package:birmex/ui/screens/admin/pages/empresaInfo.dart';
 import 'package:birmex/ui/screens/admin/pages/userPage.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class HomeTabsAdmin extends StatefulWidget {
+  //instancia del objeto user pasado por parametro
+  final FirebaseUser user;
+  //contructor
+  HomeTabsAdmin({this.user});
+
   _HomeTabsAdminState createState() => _HomeTabsAdminState();
 }
 
@@ -30,7 +36,7 @@ class _HomeTabsAdminState extends State<HomeTabsAdmin> with SingleTickerProvider
         children: <Widget>[
           TerrenosListPage(),
           EmpresaInfoPage(),
-          UserPage(),
+          UserPage(user: widget.user,),
         ],
       ),
       bottomNavigationBar: Material(
@@ -42,13 +48,16 @@ class _HomeTabsAdminState extends State<HomeTabsAdmin> with SingleTickerProvider
          controller: homeTabController,
          tabs: <Tab>[
            new Tab(
+             text: "Inicio",
              icon: Icon(Icons.home),
            ),
            new Tab(
-             icon: Icon(Icons.info_outline),
+             text: "Nosotros",
+             icon: Icon(Icons.location_city),
            ),
            new Tab(
-             icon: Icon(Icons.verified_user),
+             text: "Opciones",
+             icon: Icon(Icons.list),
            ),
          ],
         ),

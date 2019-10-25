@@ -249,10 +249,14 @@ class _RegisterFormState extends State<RegisterForm> {
       );
       //Se guardan los demas datos del usuario
      UserUpdateInfo userUpdateInfo = new UserUpdateInfo();
-      userUpdateInfo.displayName = _nombreController.text; 
+      userUpdateInfo.displayName = _nombreController.text;
+      //se guarda el uid del usuario 
+      var uid = user.uid; 
+      print(uid);
+    
       //actualizacion de la informacion
       user.updateProfile(userUpdateInfo).then((onValue){
-        Firestore.instance.collection('users').document().setData({
+        Firestore.instance.collection('users').document(uid).setData({
           'email':_emailController.text, 
           'displayName': _nombreController.text,
           'phone': _telefonoController.text

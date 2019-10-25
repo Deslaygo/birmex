@@ -71,6 +71,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.2"
+  custom_chewie:
+    dependency: "direct main"
+    description:
+      name: custom_chewie
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.7.0"
+  date_format:
+    dependency: "direct main"
+    description:
+      name: date_format
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.6"
   firebase_auth:
     dependency: "direct main"
     description:
@@ -85,11 +99,25 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.4.0+9"
+  firebase_storage:
+    dependency: "direct main"
+    description:
+      name: firebase_storage
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.6"
   flutter:
     dependency: "direct main"
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_android_pip:
+    dependency: transitive
+    description:
+      name: flutter_android_pip
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.2"
   flutter_launcher_icons:
     dependency: "direct dev"
     description:
@@ -97,6 +125,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.7.3"
+  flutter_spinkit:
+    dependency: "direct main"
+    description:
+      name: flutter_spinkit
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.1.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -130,6 +165,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.4"
+  image_picker:
+    dependency: "direct main"
+    description:
+      name: image_picker
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.5.4+3"
   matcher:
     dependency: transitive
     description:
@@ -144,6 +186,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.7"
+  open_iconic_flutter:
+    dependency: transitive
+    description:
+      name: open_iconic_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.0"
   path:
     dependency: transitive
     description:
@@ -179,6 +228,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.5"
+  rflutter_alert:
+    dependency: "direct main"
+    description:
+      name: rflutter_alert
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.3"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -240,6 +296,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.8"
+  video_player:
+    dependency: "direct main"
+    description:
+      name: video_player
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.6.5"
   xml:
     dependency: transitive
     description:

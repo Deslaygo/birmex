@@ -1,16 +1,15 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'dart:async';
 
-class  ApiTerreno{
-  //instancia de firestore
+class ApiUser{
+  //instacia de los objetos para el manejo de la bd
   final Firestore _db = Firestore.instance;
   final String path;
   CollectionReference ref;
-  //constructor
-  ApiTerreno(this.path){
+  //contructor
+  ApiUser(this.path){
     ref = _db.collection(path);
   }
-
   //Obtener la coleccion de datos
   Future<QuerySnapshot> getDataCollection(){
     return ref.getDocuments();

@@ -17,7 +17,7 @@ class CrudTerrenoModel extends ChangeNotifier{
     terrenos = result.documents.map((doc) => Terreno.fromMap(doc.data, doc.documentID)).toList();
     return terrenos;
   }
-  //Método par obtener los productos como stream
+  //Método par obtener los terrenos como stream
   Stream<QuerySnapshot> fetchTerrenosAsStream(){
     return _api.streamDataCollection();
   }

@@ -1,6 +1,5 @@
 import 'package:birmex/ui/screens/Empresa/empresaInfo.dart';
 import 'package:birmex/ui/screens/Terrenos/listTerrenos.dart';
-import 'package:birmex/ui/screens/Usuario/userPage.dart';
 import 'package:flutter/material.dart';
 
 class HomeTabs extends StatefulWidget {
@@ -30,7 +29,6 @@ class _HomeTabsState extends State<HomeTabs> with SingleTickerProviderStateMixin
         children: <Widget>[
           TerrenosListPage(),
           EmpresaInfoPage(),
-          UserPage(),
         ],
       ),
       bottomNavigationBar: Material(

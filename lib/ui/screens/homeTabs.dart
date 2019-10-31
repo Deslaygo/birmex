@@ -22,8 +22,8 @@ class _HomeTabsState extends State<HomeTabs> with SingleTickerProviderStateMixin
   void initState() {
     super.initState();
     homeTabController = new TabController(length: 3,vsync: this);
+    print("Nombre: " + widget.user.displayName);
   }
-
   @override
   Widget build(BuildContext context)  {
     return Scaffold(
